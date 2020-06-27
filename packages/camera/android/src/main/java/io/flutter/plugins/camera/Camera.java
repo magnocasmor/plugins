@@ -511,10 +511,12 @@ public class Camera {
   }
 
   private int getMediaOrientation() {
-    final int sensorOrientationOffset =
-        (currentOrientation == ORIENTATION_UNKNOWN)
-            ? 0
-            : (isFrontFacing) ? -currentOrientation : currentOrientation;
+//     final int sensorOrientationOffset =
+//         (currentOrientation == ORIENTATION_UNKNOWN)
+//             ? 0
+//             : (isFrontFacing) ? -currentOrientation : currentOrientation;
+//     return (sensorOrientationOffset + sensorOrientation + 360) % 360;
+    final int sensorOrientationOffset = (int) Math.round(0 / 90.0) * 90;
     return (sensorOrientationOffset + sensorOrientation + 360) % 360;
   }
 }
